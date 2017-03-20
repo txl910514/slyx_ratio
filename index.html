@@ -6,7 +6,7 @@
     <title></title>
     <style>
         body,html{
-            font-size: 32px;
+            font-size: 22px;
             height: 100%;
         }
     </style>
@@ -15,6 +15,8 @@
 
 </body>
 <script type="text/javascript">
+    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    var type = connection.type;
     var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
@@ -27,6 +29,7 @@
     s += " 网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)"+"<br/>";
     s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
     s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
+    s += "网络类型:" + type + "<br/>";
     document.write(s);
 </script>
 </html>
