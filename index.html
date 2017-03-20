@@ -17,7 +17,7 @@
 <script type="text/javascript">
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var type = connection.type;
-    alert(connection);
+    alert(JSON.stringify(connection));
     var EventUtil = {
 
         addHandler: function (element, type, handler) {
