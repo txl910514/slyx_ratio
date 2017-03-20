@@ -17,6 +17,7 @@
 <script type="text/javascript">
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var type = connection.type;
+    alert(connection);
     var EventUtil = {
 
         addHandler: function (element, type, handler) {
@@ -54,7 +55,7 @@
     s += " 网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)"+"<br/>";
     s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
     s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
-    s += "网络类型:" + JSON.stringify(connection) + "<br/>";
+    s += "网络类型:" + type + "<br/>";
     s += "网络类型:" + navigator.onLine + "<br/>";
     document.write(s);
 </script>
