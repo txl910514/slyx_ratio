@@ -15,7 +15,7 @@
 
 </body>
 <script type="text/javascript">
-    alert(1);
+    document.write(1);
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var type = connection.type;
     var EventUtil = {
@@ -39,22 +39,26 @@
         }
     };
 
-    EventUtil.addHandler(window, "online", function () { alert("Online"); });
+    EventUtil.addHandler(window, "online", function () {
+        document.write("Online");
+    });
 
-    EventUtil.addHandler(window, "offline", function () { alert("Offline"); });
-    var s = "";
+    EventUtil.addHandler(window, "offline", function () {
+        document.write("Offline");
+    });
+/*    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
     s += " 屏幕分辨率的高："+ window.screen.height+"<br/>";
     s += " 屏幕分辨率的宽："+ window.screen.width+"<br/>";
     s += " 屏幕倍数："+ window.devicePixelRatio +"<br/>";
-/*    s += " 网页可见区域宽："+ document.body.clientWidth+"<br/>";
-    s += " 网页可见区域高："+ document.body.clientHeight+"<br/>";*/
+    s += " 网页可见区域宽："+ document.body.clientWidth+"<br/>";
+    s += " 网页可见区域高："+ document.body.clientHeight+"<br/>";
     s += " 网页可见区域宽："+ document.body.offsetWidth + " (包括边线和滚动条的宽)"+"<br/>";
     s += " 网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)"+"<br/>";
     s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
     s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
     s += "网络类型:" + navigator.onLine + "<br/>";
-    document.write(s);
+    document.write(s);*/
 </script>
 </html>
