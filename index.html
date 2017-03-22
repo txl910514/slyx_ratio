@@ -16,7 +16,7 @@
     <div id="num"></div>
 </body>
 <script type="text/javascript">
-    var online = navigator.onLine;
+/*    var online = navigator.onLine;
     var num =0 ;
     document.getElementById('body').innerHTML = online;
     document.getElementById('num').innerHTML = num;
@@ -26,7 +26,7 @@
         num += 1;
         document.getElementById('body').innerHTML = online;
         document.getElementById('num').innerHTML = num;
-    }, 1000);
+    }, 1000);*/
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var type = connection.type;
     var EventUtil = {
@@ -50,13 +50,13 @@
         }
     };
 
-/*    EventUtil.addHandler(window, "online", function () {
+    EventUtil.addHandler(window, "online", function () {
         document.getElementById('body').innerHTML = 'online'
     });
 
     EventUtil.addHandler(window, "offline", function () {
         document.getElementById('body').innerHTML = 'offline'
-    });*/
+    });
 /*    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
