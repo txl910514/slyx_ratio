@@ -27,36 +27,42 @@
         document.getElementById('body').innerHTML = online;
         document.getElementById('num').innerHTML = num;
     }, 1000);*/
-    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
-    var type = connection.type;
-    var EventUtil = {
+/*var EventUtil = {
 
-        addHandler: function (element, type, handler) {
+    addHandler: function (element, type, handler) {
 
-            if(element.addEventListener) {
+        if(element.addEventListener) {
 
-                element.addEventListener(type, handler, false);
+            element.addEventListener(type, handler, false);
 
-            }else if (element.attachEvent) {
+        }else if (element.attachEvent) {
 
-                element.attachEvent("on" + type, handler);
+            element.attachEvent("on" + type, handler);
 
-            }else {
+        }else {
 
-                element["on" + type] = handler;
-
-            }
+            element["on" + type] = handler;
 
         }
-    };
 
-    EventUtil.addHandler(window, "online", function () {
-        document.getElementById('body').innerHTML = 'online'
-    });
+    }
+};
 
-    EventUtil.addHandler(window, "offline", function () {
-        document.getElementById('body').innerHTML = 'offline'
-    });
+EventUtil.addHandler(window, "online", function () {
+    document.getElementById('body').innerHTML = 'online'
+});
+
+EventUtil.addHandler(window, "offline", function () {
+    document.getElementById('body').innerHTML = 'offline'
+});*/
+    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
+    var type = connection.type;
+    document.getElementById('body').innerHTML = type;
+    function updateConnectionStatus() {
+        document.getElementById('body').innerHTML = "网络由 " + type + " 变化为 " + connection.type;
+    }
+//监听网络类型发生变化
+connection.addEventListener('typechange', updateConnectionStatus);
 /*    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
