@@ -11,11 +11,16 @@
         }
     </style>
 </head>
-<body>
+<body id="body">
 
 </body>
 <script type="text/javascript">
-    document.write(1);
+    var online = navigator.onLine;
+    document.getElementById('body').innerHTML = online;
+    setInterval(function() {
+        online = navigator.onLine;
+        document.getElementById('body').innerHTML = online;
+    }, 1000);
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var type = connection.type;
     var EventUtil = {
@@ -39,13 +44,13 @@
         }
     };
 
-    EventUtil.addHandler(window, "online", function () {
-        document.write("Online");
+/*    EventUtil.addHandler(window, "online", function () {
+        document.getElementById('body').innerHTML = 'online'
     });
 
     EventUtil.addHandler(window, "offline", function () {
-        document.write("Offline");
-    });
+        document.getElementById('body').innerHTML = 'offline'
+    });*/
 /*    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
