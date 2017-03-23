@@ -9,11 +9,26 @@
             font-size: 22px;
             height: 100%;
         }
+        button {
+            width: 100%;
+            height:50px;
+            display: block;
+            margin-top:20px;
+        }
+        button:focus {
+            color: red;
+        }
     </style>
 </head>
 <body >
     <div id="body"></div>
     <div id="num"></div>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
 </body>
 <script type="text/javascript">
 /*    var online = navigator.onLine;
@@ -63,7 +78,7 @@ EventUtil.addHandler(window, "offline", function () {
     }
 //监听网络类型发生变化
 connection.addEventListener('typechange', updateConnectionStatus);*/
-    var s = "";
+/*    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
     s += " 屏幕分辨率的高："+ window.screen.height+"<br/>";
@@ -76,7 +91,6 @@ connection.addEventListener('typechange', updateConnectionStatus);*/
     s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
     s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
     s += "网络类型:" + navigator.onLine + "<br/>";
-    document.write(s);
-
+    document.write(s);*/
 </script>
 </html>
