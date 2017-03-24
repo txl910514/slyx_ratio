@@ -8,10 +8,10 @@
         body,html{
             font-size: 22px;
             height: 100%;
+            overflow: hidden;
         }
         body {
             overflow: hidden;
-            overflow-y: auto;
         }
         a {
             width: 100%;
@@ -21,6 +21,7 @@
             text-align: center;
             border: solid 1px #000;
             line-height: 50px;
+            position: relative;
         }
         a:focus {
             color: red;
@@ -31,23 +32,40 @@
     <div id="body"></div>
     <div id="num"></div>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">1</a>
-    <a href="http://www.baidu.com">2</a>
-    <a href="http://www.baidu.com">3</a>
-    <a href="http://www.baidu.com">4</a>
-    <a href="http://www.baidu.com">5</a>
-    <a href="http://www.baidu.com">6</a>
-    <a href="http://www.baidu.com">7</a>
-    <a href="http://www.baidu.com">8</a>
-    <a href="http://www.baidu.com">9</a>
-    <a href="http://www.baidu.com">10</a>
-    <a href="http://www.baidu.com">11</a>
-    <a href="http://www.baidu.com">12</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">2</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">3</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">4</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">5</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">6</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">7</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">8</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">9</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">10</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">11</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>
 </body>
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
+    var last;
     function focus_func(obj) {
         var $dom = $(obj);
-        document.getElementById('body').innerHTML = $dom.text();
+        var id = $dom.text;
+        var animate_px;
+        if(last) {
+           if (parseInt(id) > parseInt(last)) {
+               animate_px = '-' + (parseInt(id)-1)*50 + 'px';
+           }
+           else if(parseInt(id) < parseInt(last)) {
+               animate_px = (parseInt(id))*50 + 'px';
+           }
+           else {
+               animate_px = (parseInt(id))*50 + 'px';
+           }
+            $('a').animate({
+                top:animate_px
+            },1000)
+        }
+
     }
 /*    var online = navigator.onLine;
     var num =0 ;
