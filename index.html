@@ -49,7 +49,6 @@
 
     var COMMON_FUNC = {
         ready_init: function () {
-            COMMON_FUNC.setCookie('version', '111111', location.pathname, location.hostname );
             var getCookie = COMMON_FUNC.getCookie('version');
             document.getElementById('body').innerHTML = getCookie;
         },
