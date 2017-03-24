@@ -31,9 +31,9 @@
 <body >
     <div id="body"></div>
     <div id="num"></div>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">1</a>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">2</a>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">3</a>
+    <a href="javascript:;" onfocus="focus_func(this)">1</a>
+    <a href="javascript:;" onfocus="focus_func(this)">2</a>
+    <a href="javascript:;" onfocus="focus_func(this)">3</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">4</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">5</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">6</a>
@@ -49,21 +49,26 @@
     var last;
     function focus_func(obj) {
         var $dom = $(obj);
-        var id = $dom.text;
+        var id = $dom.text();
         var animate_px;
+        console.log(last);
         if(last) {
            if (parseInt(id) > parseInt(last)) {
-               animate_px = '-' + (parseInt(id)-1)*50 + 'px';
+               animate_px = '-' + (parseInt(id)-1)*(50+20) + 'px';
            }
            else if(parseInt(id) < parseInt(last)) {
-               animate_px = (parseInt(id))*50 + 'px';
+               animate_px = '-' +(parseInt(id))*(50+20) + 'px';
            }
            else {
-               animate_px = (parseInt(id))*50 + 'px';
+               animate_px ='-'+ (parseInt(id))*(50+20) + 'px';
            }
             $('a').animate({
                 top:animate_px
             },1000)
+            last = id;
+        }
+        else {
+            last = id;
         }
 
     }
