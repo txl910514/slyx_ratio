@@ -30,7 +30,7 @@
 <body >
     <div id="body"></div>
     <div id="num"></div>
-    <a href="http://www.baidu.com">1</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">1</a>
     <a href="http://www.baidu.com">2</a>
     <a href="http://www.baidu.com">3</a>
     <a href="http://www.baidu.com">4</a>
@@ -43,7 +43,12 @@
     <a href="http://www.baidu.com">11</a>
     <a href="http://www.baidu.com">12</a>
 </body>
+<script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
+    function focus_func(obj) {
+        var $dom = $(obj);
+        document.getElementById('body').innerHTML = $dom.text();
+    }
 /*    var online = navigator.onLine;
     var num =0 ;
     document.getElementById('body').innerHTML = online;
