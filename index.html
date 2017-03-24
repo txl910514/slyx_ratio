@@ -31,7 +31,7 @@
 <body >
     <div id="body"></div>
     <div id="num"></div>
-    <a href="javascript:;" onfocus="focus_func(this)">1</a>
+<!--    <a href="javascript:;" onfocus="focus_func(this)">1</a>
     <a href="javascript:;" onfocus="focus_func(this)">2</a>
     <a href="javascript:;" onfocus="focus_func(this)">3</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">4</a>
@@ -42,11 +42,41 @@
     <a href="http://www.baidu.com" onfocus="focus_func(this)">9</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">10</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">11</a>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>-->
 </body>
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
-    var last;
+
+    var COMMON_FUNC = {
+        ready_init: function () {
+            COMMON_FUNC.setCookie('version', '111111', location.pathname, location.hostname );
+            var getCookie = COMMON_FUNC.getCookie('version');
+            document.getElementById('body').innerHTML = getCookie;
+        },
+
+        setCookie: function (name, value, path, domain) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=" + path + ";domain=" + domain;
+            Days = null, exp = null;
+        },
+
+        getCookie: function (name) {
+            get_reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (get_arr = document.cookie.match(get_reg)) {
+                return unescape(get_arr[2]);
+            }
+            else {
+                return null;
+            }
+        },
+    };
+
+    $(function() {
+        COMMON_FUNC.ready_init();
+    });
+/*    var last;
     function focus_func(obj) {
         var $dom = $(obj);
         var id = $dom.text();
@@ -71,7 +101,9 @@
             last = id;
         }
 
-    }
+    }*/
+
+
 /*    var online = navigator.onLine;
     var num =0 ;
     document.getElementById('body').innerHTML = online;
