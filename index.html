@@ -80,9 +80,11 @@
         var $dom = $(obj);
         var id = $dom.text();
         var animate_px;
+        document.getElementById('body').innerHTML = id;
         console.log(last);
         if(last) {
-           if (parseInt(id) > parseInt(last)) {
+
+/*           if (parseInt(id) > parseInt(last)) {
                animate_px = '-' + (parseInt(id)-1)*(50+20) + 'px';
            }
            else if(parseInt(id) < parseInt(last)) {
@@ -94,7 +96,7 @@
             $('a').animate({
                 top:animate_px
             },1000)
-            last = id;
+            last = id;*/
         }
         else {
             last = id;
