@@ -31,10 +31,10 @@
 <body >
     <div id="body"></div>
     <div id="num"></div>
-<!--    <a href="javascript:;" onfocus="focus_func(this)">1</a>
-    <a href="javascript:;" onfocus="focus_func(this)">2</a>
-    <a href="javascript:;" onfocus="focus_func(this)">3</a>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">4</a>
+    <a href="javascript:;" onclick="focus_func(this)">1</a>
+    <a href="javascript:;" onclick="focus_func(this)">2</a>
+    <a href="javascript:;" onclick="focus_func(this)">3</a>
+    <a href="javascript:;" onclick="focus_func(this)">4</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">5</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">6</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">7</a>
@@ -42,12 +42,12 @@
     <a href="http://www.baidu.com" onfocus="focus_func(this)">9</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">10</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">11</a>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>-->
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>
 </body>
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
 
-    var COMMON_FUNC = {
+/*    var COMMON_FUNC = {
         ready_init: function () {
             var getCookie = COMMON_FUNC.getCookie('version');
             document.getElementById('body').innerHTML = getCookie;
@@ -74,8 +74,8 @@
 
     $(function() {
         COMMON_FUNC.ready_init();
-    });
-/*    var last;
+    });*/
+    var last;
     function focus_func(obj) {
         var $dom = $(obj);
         var id = $dom.text();
@@ -100,7 +100,7 @@
             last = id;
         }
 
-    }*/
+    }
 
 
 /*    var online = navigator.onLine;
