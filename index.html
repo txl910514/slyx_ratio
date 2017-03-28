@@ -29,7 +29,7 @@
     </style>
 </head>
 <body >
-    <div id="body"></div>
+<!--    <div id="body"></div>
     <div id="num"></div>
     <a href="javascript:;" onclick="focus_func(this)">1</a>
     <a href="javascript:;" onclick="focus_func(this)">2</a>
@@ -42,7 +42,7 @@
     <a href="http://www.baidu.com" onfocus="focus_func(this)">9</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">10</a>
     <a href="http://www.baidu.com" onfocus="focus_func(this)">11</a>
-    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>
+    <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>-->
 </body>
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
@@ -75,7 +75,7 @@
     $(function() {
         COMMON_FUNC.ready_init();
     });*/
-    var last;
+/*    var last;
     function focus_func(obj) {
         var $dom = $(obj);
         var id = $dom.text();
@@ -84,7 +84,7 @@
         console.log(last);
         if(last) {
 
-/*           if (parseInt(id) > parseInt(last)) {
+/!*           if (parseInt(id) > parseInt(last)) {
                animate_px = '-' + (parseInt(id)-1)*(50+20) + 'px';
            }
            else if(parseInt(id) < parseInt(last)) {
@@ -96,13 +96,13 @@
             $('a').animate({
                 top:animate_px
             },1000)
-            last = id;*/
+            last = id;*!/
         }
         else {
             last = id;
         }
 
-    }
+    }*/
 
 
 /*    var online = navigator.onLine;
@@ -152,7 +152,7 @@ EventUtil.addHandler(window, "offline", function () {
     }
 //监听网络类型发生变化
 connection.addEventListener('typechange', updateConnectionStatus);*/
-/*    var s = "";
+    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
     s += " 屏幕分辨率的高："+ window.screen.height+"<br/>";
@@ -165,6 +165,6 @@ connection.addEventListener('typechange', updateConnectionStatus);*/
     s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
     s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
     s += "网络类型:" + navigator.onLine + "<br/>";
-    document.write(s);*/
+    document.write(s);
 </script>
 </html>
