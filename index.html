@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title></title>
+    <link rel="stylesheet" href="index.css">
     <style>
-        body,html{
+/*        body,html{
             font-size: 22px;
             height: 100%;
             overflow: hidden;
@@ -25,10 +26,135 @@
         }
         a:focus {
             color: red;
-        }
+        }*/
     </style>
 </head>
 <body >
+<div class="select-bg">
+    <div class="hospital-content-auto">
+        <div class="hospital-content display-middle">
+            <a href="javascript:;" class="hospital-select-a" id="1" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">1</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="2" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">2</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="3" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">3</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="4" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">4</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="5" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">5</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="6" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">6</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="7" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">7</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="8" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">8</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="9" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">9</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="10" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">10</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="11" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">11</div>
+                </div>
+            </a>
+            <a href="javascript:;" class="hospital-select-a" id="12" data-name="1">
+                <div class="hospital-line">
+                    <div class="hospital-active">
+                        四
+                        <div class="active-icon"></div>
+                    </div>
+                    <div class="hospital-text">12</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="no-data-position position-absolute" style="display: none">
+        <div class="table">
+            <div class="table-cell">
+                <div class="no-data">
+                    <div class="line1">抱歉！</div>
+                    <div class="line2">该医院尚未开通大屏功能，或您的账号未关联医院</div>
+                    <div class="line3">如有疑问，请联系数联医信 ( 400 - 9637626 )</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--    <div id="body"></div>
     <div id="num"></div>
     <a href="javascript:;" onclick="focus_func(this)">1</a>
@@ -45,6 +171,7 @@
     <a href="http://www.baidu.com" onfocus="focus_func(this)">12</a>-->
 </body>
 <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 <script type="text/javascript">
 
 /*    var COMMON_FUNC = {
@@ -152,7 +279,7 @@ EventUtil.addHandler(window, "offline", function () {
     }
 //监听网络类型发生变化
 connection.addEventListener('typechange', updateConnectionStatus);*/
-    var s = "";
+/*    var s = "";
     s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
     s += " 屏幕分辨率的高："+ window.screen.height+"<br/>";
@@ -165,6 +292,6 @@ connection.addEventListener('typechange', updateConnectionStatus);*/
     s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
     s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
     s += "网络类型:" + navigator.onLine + "<br/>";
-    document.write(s);
+    document.write(s);*/
 </script>
 </html>
