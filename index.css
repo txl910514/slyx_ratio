@@ -78,19 +78,18 @@ div {
     position: relative;
     padding: 5px 0; }
  .hospital-select-a .hospital-line .hospital-active {
-/*    position: absolute;*/
-     display: none;
+    position: absolute;
     right: 100%;
     color: transparent; }
  .hospital-select-a .hospital-line .hospital-active .active-icon {
     background: transparent;
-/*    position: absolute;*/
+    position: absolute;
     top: 0; }
  .hospital-select-a .hospital-line .hospital-text {
     padding: 10px 80px 10px 10px; }
  .hospital-select-a:focus .hospital-active {
     padding: 10px 200px 10px 10px;
-/*    position: absolute;*/
+    position: absolute;
     right: 100%;
     color: transparent;
     background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 100%);
@@ -101,7 +100,7 @@ div {
     height: 100%;
     background-position: center;
     background-size: contain;
-/*    position: absolute;*/
+    position: absolute;
     top: 0;
     right: 10px; }
 .hospital-select-a:focus .hospital-line .hospital-text {
