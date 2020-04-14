@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title></title>
-<!--    <link rel="stylesheet" href="index.css">-->
+    <!--    <link rel="stylesheet" href="index.css">-->
     <style>
-        body,html{
+        body,
+        html {
             font-size: 22px;
             height: 100%;
-/*            overflow: hidden;*/
+            /*            overflow: hidden;*/
         }
+
         body {
-/*            overflow: hidden;*/
+            /*            overflow: hidden;*/
         }
+
         a {
             width: 100%;
-            height:50px;
+            height: 50px;
             display: block;
-            margin-top:20px;
+            margin-top: 20px;
             text-align: center;
             border: solid 1px #000;
             line-height: 50px;
             position: relative;
         }
+
         a:focus {
             color: red;
         }
     </style>
     <link rel="stylesheet" href="./layui/css/layui.css">
 </head>
-<body >
-<!--<div class="select-bg ">
+
+<body>
+    <!--<div class="select-bg ">
 &lt;!&ndash;    <div class="hospital-content-auto">
         <div class="hospital-content display-middle">
 
@@ -50,7 +56,7 @@
         </div>
     </div>&ndash;&gt;
 </div>-->
-<!--<div class="hospital-content-auto" style="text-align: center">
+    <!--<div class="hospital-content-auto" style="text-align: center">
     <div class="hospital-content display-middle">
         <a href="javascript:;" class="hospital-select-a" id="1" data-name="1">
             <div class="hospital-line">
@@ -162,7 +168,7 @@
         </a>
     </div>
 </div>-->
-<!--    <div id="body"></div>
+    <!--    <div id="body"></div>
     <div id="num"></div>
     <a href="javascript:;" onclick="focus_func(this)">1</a>
     <a href="javascript:;" onclick="focus_func(this)">2</a>
@@ -181,111 +187,111 @@
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript">
 
-/*    var COMMON_FUNC = {
-        ready_init: function () {
-            var getCookie = COMMON_FUNC.getCookie('version');
-            document.getElementById('body').innerHTML = getCookie;
-        },
+    /*    var COMMON_FUNC = {
+            ready_init: function () {
+                var getCookie = COMMON_FUNC.getCookie('version');
+                document.getElementById('body').innerHTML = getCookie;
+            },
 
-        setCookie: function (name, value, path, domain) {
-            var Days = 30;
-            var exp = new Date();
-            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=" + path + ";domain=" + domain;
-            Days = null, exp = null;
-        },
+            setCookie: function (name, value, path, domain) {
+                var Days = 30;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=" + path + ";domain=" + domain;
+                Days = null, exp = null;
+            },
 
-        getCookie: function (name) {
-            get_reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-            if (get_arr = document.cookie.match(get_reg)) {
-                return unescape(get_arr[2]);
+            getCookie: function (name) {
+                get_reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                if (get_arr = document.cookie.match(get_reg)) {
+                    return unescape(get_arr[2]);
+                }
+                else {
+                    return null;
+                }
+            },
+        };
+
+        $(function() {
+            COMMON_FUNC.ready_init();
+        });*/
+    /*    var last;
+        function focus_func(obj) {
+            var $dom = $(obj);
+            var id = $dom.text();
+            var animate_px;
+            document.getElementById('body').innerHTML = id;
+            console.log(last);
+            if(last) {
+
+    /!*           if (parseInt(id) > parseInt(last)) {
+                   animate_px = '-' + (parseInt(id)-1)*(50+20) + 'px';
+               }
+               else if(parseInt(id) < parseInt(last)) {
+                   animate_px = '-' +(parseInt(id))*(50+20) + 'px';
+               }
+               else {
+                   animate_px ='-'+ (parseInt(id))*(50+20) + 'px';
+               }
+                $('a').animate({
+                    top:animate_px
+                },1000)
+                last = id;*!/
             }
             else {
-                return null;
+                last = id;
             }
-        },
-    };
 
-    $(function() {
-        COMMON_FUNC.ready_init();
-    });*/
-/*    var last;
-    function focus_func(obj) {
-        var $dom = $(obj);
-        var id = $dom.text();
-        var animate_px;
-        document.getElementById('body').innerHTML = id;
-        console.log(last);
-        if(last) {
-
-/!*           if (parseInt(id) > parseInt(last)) {
-               animate_px = '-' + (parseInt(id)-1)*(50+20) + 'px';
-           }
-           else if(parseInt(id) < parseInt(last)) {
-               animate_px = '-' +(parseInt(id))*(50+20) + 'px';
-           }
-           else {
-               animate_px ='-'+ (parseInt(id))*(50+20) + 'px';
-           }
-            $('a').animate({
-                top:animate_px
-            },1000)
-            last = id;*!/
-        }
-        else {
-            last = id;
-        }
-
-    }*/
+        }*/
 
 
-/*    var online = navigator.onLine;
-    var num =0 ;
-    document.getElementById('body').innerHTML = online;
-    document.getElementById('num').innerHTML = num;
-    setInterval(function() {
-        online = navigator.onLine;
-        console.log(online);
-        num += 1;
+    /*    var online = navigator.onLine;
+        var num =0 ;
         document.getElementById('body').innerHTML = online;
         document.getElementById('num').innerHTML = num;
-    }, 1000);*/
-/*var EventUtil = {
+        setInterval(function() {
+            online = navigator.onLine;
+            console.log(online);
+            num += 1;
+            document.getElementById('body').innerHTML = online;
+            document.getElementById('num').innerHTML = num;
+        }, 1000);*/
+    /*var EventUtil = {
 
-    addHandler: function (element, type, handler) {
+        addHandler: function (element, type, handler) {
 
-        if(element.addEventListener) {
+            if(element.addEventListener) {
 
-            element.addEventListener(type, handler, false);
+                element.addEventListener(type, handler, false);
 
-        }else if (element.attachEvent) {
+            }else if (element.attachEvent) {
 
-            element.attachEvent("on" + type, handler);
+                element.attachEvent("on" + type, handler);
 
-        }else {
+            }else {
 
-            element["on" + type] = handler;
+                element["on" + type] = handler;
+
+            }
 
         }
+    };
 
-    }
-};
+    EventUtil.addHandler(window, "online", function () {
+        document.getElementById('body').innerHTML = 'online'
+    });
 
-EventUtil.addHandler(window, "online", function () {
-    document.getElementById('body').innerHTML = 'online'
-});
-
-EventUtil.addHandler(window, "offline", function () {
-    document.getElementById('body').innerHTML = 'offline'
-});*/
-/*    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
-    var type = connection.type;
-    document.getElementById('body').innerHTML = type;
-    function updateConnectionStatus() {
-        document.getElementById('body').innerHTML = "网络由 " + type + " 变化为 " + connection.type;
-    }
-//监听网络类型发生变化
-connection.addEventListener('typechange', updateConnectionStatus);*/
+    EventUtil.addHandler(window, "offline", function () {
+        document.getElementById('body').innerHTML = 'offline'
+    });*/
+    /*    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
+        var type = connection.type;
+        document.getElementById('body').innerHTML = type;
+        function updateConnectionStatus() {
+            document.getElementById('body').innerHTML = "网络由 " + type + " 变化为 " + connection.type;
+        }
+    //监听网络类型发生变化
+    connection.addEventListener('typechange', updateConnectionStatus);*/
     // var s = "";
     // s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
     // s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
@@ -302,24 +308,65 @@ connection.addEventListener('typechange', updateConnectionStatus);*/
     // s += "userAgent:" + navigator.userAgent + "<br/>"
     // document.write(s);
 </script>
-<div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+<div class="layui-inline">
+    <!-- 注意：这一层元素并不是必须的 -->
     开始时间
-    <input type="text" class="layui-input" id="test1">
+    <span class="start_date_box">
+        <input type="text" class="layui-input" id="test1">
+    </span>
     结束时间
-    <input type="text" class="layui-input" id="test2">
+    <span class="end_date_box">
+        <input type="text" class="layui-input" id="test2">
+    </span>
 </div>
 <script src="./layui/layui.js"></script>
+<script type="text/html" id="test2_html">
+    <input type="text" class="layui-input" id="test2">
+</script>
+<script type="text/html" id="test1_html">
+    <input type="text" class="layui-input" id="test1">
+</script>
 <script>
-    layui.use('laydate', function(){
+    layui.use(['jquery', 'laydate'], function () {
         var laydate = layui.laydate;
-        
-        //执行一个laydate实例
-        laydate.render({
-            elem: '#test1' //指定元素
-        });
-        laydate.render({
-            elem: '#test2' //指定元素
-        });
+        var $ = layui.$;
+
+        initStartDate();
+        initEndDate();
+        function initEndDate(min, max) {
+            var option = {
+                elem: '#test2',
+                done: function (value, date, endDate) {
+                    $('.start_date_box').empty().html($('#test1_html').html());
+                    initStartDate('', value)
+                }
+            }
+            if (min) {
+                option.min = min || '';
+            }
+            if (max) {
+                option.max = max || '';
+            }
+            console.log(option);
+            laydate.render(option);
+        }
+        function initStartDate(min, max) {
+            var option = {
+                elem: '#test1',
+                done: function (value, date, endDate) {
+                    $('.end_date_box').empty().html($('#test2_html').html());
+                    initEndDate(value)
+                }
+            }
+            if (min) {
+                option.min = min || '';
+            }
+            if (max) {
+                option.max = max || '';
+            }
+            laydate.render(option);
+        }
     });
 </script>
+
 </html>
