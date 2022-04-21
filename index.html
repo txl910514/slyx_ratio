@@ -292,24 +292,23 @@
         }
     //监听网络类型发生变化
     connection.addEventListener('typechange', updateConnectionStatus);*/
-    // var s = "";
-    // s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
-    // s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
-    // s += " 屏幕分辨率的高："+ window.screen.height+"<br/>";
-    // s += " 屏幕分辨率的宽："+ window.screen.width+"<br/>";
-    // s += " 屏幕倍数："+ window.devicePixelRatio +"<br/>";
-    // s += " 网页可见区域宽："+ document.body.clientWidth+"<br/>";
-    // s += " 网页可见区域高："+ document.body.clientHeight+"<br/>";
-    // s += " 网页可见区域宽："+ document.body.offsetWidth + " (包括边线和滚动条的宽)"+"<br/>";
-    // s += " 网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)"+"<br/>";
-    // s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
-    // s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
-    // s += "网络类型:" + navigator.onLine + "<br/>";
-    // s += "userAgent:" + navigator.userAgent + "<br/>"
-    // document.write(s);
+    var s = "";
+    s += " 网页正文全文宽："+ document.body.scrollWidth+"<br/>";
+    s += " 网页正文全文高："+ document.body.scrollHeight+"<br/>";
+    s += " 屏幕分辨率的高："+ window.screen.height+"<br/>";
+    s += " 屏幕分辨率的宽："+ window.screen.width+"<br/>";
+    s += " 屏幕倍数："+ window.devicePixelRatio +"<br/>";
+    s += " 网页可见区域宽："+ document.body.clientWidth+"<br/>";
+    s += " 网页可见区域高："+ document.body.clientHeight+"<br/>";
+    s += " 网页可见区域宽："+ document.body.offsetWidth + " (包括边线和滚动条的宽)"+"<br/>";
+    s += " 网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)"+"<br/>";
+    s += " 屏幕可用工作区高度："+ window.screen.availHeight+"<br/>";
+    s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"<br/>";
+    s += "网络类型:" + navigator.onLine + "<br/>";
+    s += "userAgent:" + navigator.userAgent + "<br/>"
+    document.write(s);
 </script>
-<div class="layui-inline">
-    <!-- 注意：这一层元素并不是必须的 -->
+<!-- <div class="layui-inline">
     开始时间
     <span class="start_date_box">
         <input type="text" class="layui-input" id="test1">
@@ -318,7 +317,7 @@
     <span class="end_date_box">
         <input type="text" class="layui-input" id="test2">
     </span>
-</div>
+</div> -->
 <script src="./layui/layui.js"></script>
 <script type="text/html" id="test2_html">
     <input type="text" class="layui-input" id="test2">
